@@ -1,6 +1,7 @@
 FROM node:alpine
 
-RUN apk update && \
+RUN set -x && \
+    apk update && \
     apk add --no-cache php5 php5-openssl php5-json php5-phar php5-zlib && \
     cd /usr/bin && \
     php -r "copy('http://getcomposer.org/installer', 'composer-setup.php');" && \
