@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:14.20-alpine
 
 RUN set -x && \
     apk update && \
